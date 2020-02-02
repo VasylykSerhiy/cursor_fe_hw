@@ -14,11 +14,11 @@ const sumPrice = ananas + orange + mango;
 console.log(`Cумма всех товаров: ${sumPrice}`);
 document.writeln(`Cумма всех товаров: ${sumPrice} </br>`);
 
-const sumPriceFloor =  Math.floor( ananas + orange + mango );
+const sumPriceFloor =  Math.floor(ananas) + Math.floor(orange) + Math.floor(mango);
 console.log(`Cумма целой части всех товаров: ${sumPriceFloor}`);
 document.writeln(`Cумма целой части всех товаров: ${sumPriceFloor} </br>`);
 
-const sumPriceRound =  Math.round( ananas / 100 + orange / 100 + mango / 100) * 100;
+const sumPriceRound =  Math.round( sumPrice / 100) * 100;
 console.log(`Cуммa товаров округленную до сотен: ${sumPriceRound}`);
 document.writeln(`Cуммa товаров округленную до сотен: ${sumPriceRound} </br>`);
 
@@ -26,7 +26,8 @@ const remainderPrice = (Math.floor(sumPrice) % 2) == 0;
 console.log(`Булевое значение: ${remainderPrice}`);
 document.writeln(`Булевое значение: ${remainderPrice} </br>`);
 
-const surrender = 500 - sumPrice;
+const magicNumber = 500;
+const surrender = magicNumber - sumPrice;
 console.log(`Cумма сдачи, при оплате всех товаров: ${surrender}`);
 document.writeln(`Cумма сдачи, при оплате всех товаров: ${surrender} </br>`);
 
