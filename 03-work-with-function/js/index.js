@@ -2,7 +2,7 @@ const ress = document.querySelector('.result');
 
 function getMaxDigit(number) {
   let result = 0;
-  numberStr =  String(number);
+  const numberStr =  String(number);
   for (let i = 0; i < numberStr.length; i++){
     if (result <= numberStr[i]){
       result = numberStr[i];
