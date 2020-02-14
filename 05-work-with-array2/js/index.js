@@ -1,5 +1,16 @@
 const ress = document.querySelector('.result');
+
 const getData = (data) => { return  result = data.split(' ') }
+const integerNumber = (arr) => {
+  const integer = [];
+  for(let i = 0; i < arr.length; i++){
+    if(Number.isInteger(Number(arr[i]))){
+      integer.push(Number(arr[i]))
+    }
+  }
+  return integer
+}
+
 
 const getRandomArray = (length, min, max) =>{
   const result = [];
@@ -12,15 +23,8 @@ const getRandomArray = (length, min, max) =>{
 }
 
 const getModa = (...numbers) => {
-  const integer = [];
-  const arrNumber = getData(...numbers)
-  for(let i = 0; i < arrNumber.length; i++){
-    if(Number.isInteger(Number(arrNumber[i]))){
-      integer.push(arrNumber[i])
-    }
-  }
-  console.log(integer);
-  const res = integer.reduce((acc, el) => {
+  const arrIntegerNumber = integerNumber(getData(...numbers))
+  const res = arrIntegerNumber.reduce((acc, el) => {
     acc[el] = (acc[el] || 0) + 1;
     return acc;
   },{})
@@ -37,10 +41,34 @@ const getModa = (...numbers) => {
       biggestKey += ` ${key}`;
     }
   }
-  
 
-  ress.innerHTML += (`Mode from the numbers ${numbers}: ${biggestKey} <br>`)
+  ress.innerHTML += (`Mode from the numbers ${numbers}-> ${biggestKey} <br>`)
   return biggestKey
 }
 
 
+const getAverage = (...numbers) => {
+  const arrIntegerNumber = integerNumber(getData(...numbers))
+  const average = (arrIntegerNumber.reduce((acc, number) => {
+    (acc += number)
+    return acc
+  },0) / arrIntegerNumber.length).toFixed(3)
+ 
+  ress.innerHTML += (`The arithmetic mean of the numbers ${numbers} -> ${average} <br>`)
+  return average
+}
+
+
+const getMedian = (...numbers) => {
+  const arrIntegerNumber = integerNumber(getData(...numbers)).sort((a, b) => a - b)
+  let result = null;
+  if( arrIntegerNumber.length % 2 !== 0){
+    result = arrIntegerNumber[Math.floor(arrIntegerNumber.length / 2)];
+  } else {
+    result = (arrIntegerNumber[(arrIntegerNumber.length / 2 - 1)] + arrIntegerNumber[(arrIntegerNumber.length / 2)]) / 2
+  }
+  ress.innerHTML += (`The arithmetic mean of the numbers ${arrIntegerNumber} -> ${result} <br>`)
+  return result 
+}
+
+getMedian('4 6 2 9 4')
