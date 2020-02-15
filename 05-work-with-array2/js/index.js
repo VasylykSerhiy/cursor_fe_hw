@@ -98,13 +98,13 @@ const replaceBadWords = (string) => {
 
 const divideByThree = (string) => {
   const arrString = string.split(' ')
-  let result = [];
+  const result = [];
   arrString.map(item => {
     for (let i = 0; i < item.length; i+=3) {
       result.push(item.slice(i, i + 3));
     }
   })
-  ress.innerHTML += `${string} => ${result.slice(' ')} <br>`
+  ress.innerHTML += `${string} => ${result} <br>`
 
   return result
 } 
