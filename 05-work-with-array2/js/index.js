@@ -100,11 +100,10 @@ const divideByThree = (string) => {
   const arrString = string.split(' ')
   let result = [];
   arrString.map(item => {
-    for (var i = 0; i < item.length; i+=3) {
+    for (let i = 0; i < item.length; i+=3) {
       result.push(item.slice(i, i + 3));
     }
   })
-  console.log(result);
   ress.innerHTML += `${string} => ${result.slice(' ')} <br>`
 
   return result
