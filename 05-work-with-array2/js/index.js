@@ -71,4 +71,41 @@ const getMedian = (...numbers) => {
   return result 
 }
 
-getMedian('4 6 2 9 4')
+const filterEvenNumbers = (...numbers) => {
+  const result = getData(...numbers).filter(item => item % 2 === 0);
+  ress.innerHTML += `Even numbers from ${numbers} => ${result} <br>`
+  return result
+}
+
+const countPositiveNumbers = (...numbers) => {
+  const result = (getData(...numbers).filter(item => item > 0)).length
+  ress.innerHTML += `In ${numbers} more than 0 => ${result}<br>`
+  return result
+}
+
+const getDividedByFive = (...numbers) => {
+  const result = getData(...numbers).filter(item => item % 5 === 0)
+  ress.innerHTML += `Among ${numbers} divide by 5 => ${result} <br>`
+  return result
+}
+
+const replaceBadWords = (string) => {
+  const badWords = /shit|fuck/i;
+  result = string.replace(badWords, '****')
+  ress.innerHTML += `${string} => ${result} <br>`
+  return result
+}
+
+const divideByThree = (string) => {
+  const arrString = string.split(' ')
+  let result = [];
+  arrString.map(item => {
+    for (var i = 0; i < item.length; i+=3) {
+      result.push(item.slice(i, i + 3));
+    }
+  })
+  console.log(result);
+  ress.innerHTML += `${string} => ${result.slice(' ')} <br>`
+
+  return result
+} 
