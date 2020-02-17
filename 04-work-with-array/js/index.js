@@ -17,13 +17,8 @@ const pairStudent = (student) => {
     })
 
     for(let i = 0; i < women.length; i++){
-        pair.push([men[i] + ' і ' + women[i]])
+        pair.push([men[i], women[i]])
     }
-
-    result.innerHTML += `Function 1: <br>`
-    pair.map((i) => {
-        result.innerHTML += `${i} <br>`
-    });
 
     return pair;
 }
@@ -33,14 +28,8 @@ console.log(pairStudent(students));
 const pairThemes = []; 
 const pairAndThemes = (pair, themes) => {
     for(let i = 0; i < pair.length; i++){
-        pairThemes.push([pair[i] + ' => ' + themes[i]])
+        pairThemes.push([pair[i].join(' и '), themes[i]])
     }
-
-    result.innerHTML += `<br> Function 2: <br>`
-    pairThemes.map((i) => {
-        result.innerHTML += `${i} <br>`
-    });
-
     return pairThemes;
 }
 
@@ -50,13 +39,8 @@ const studentMarks = [];
 const getMarks = (students, marks) => {
   
     for(let i = 0; i < students.length; i++){
-        studentMarks.push([students[i] + ': ' + marks[i]])
+        studentMarks.push([students[i], marks[i]])
     }
-
-    result.innerHTML += `<br> Function 3: <br>`
-    studentMarks.map((i) => {
-        result.innerHTML += `${i} <br>`
-    });
 
     return studentMarks;
 }
@@ -64,21 +48,16 @@ const getMarks = (students, marks) => {
 console.log(getMarks(students, marks));
 
 const pairThemeMark = [];
-const getThemesMark = (pairThemes) => {
+const getThemesMark = (pair, themes) => {
     const minMark = 1,
          maxsMark = 5;
 
     for(let i = 0; i < pairThemes.length; i++){
         let getRandomMark = Math.floor(Math.random() * (maxsMark - minMark + 1)) + minMark;
-        pairThemeMark.push([pairThemes[i] + ': ' + getRandomMark])
+        pairThemeMark.push([pair[i].join(' и '), themes[i] , getRandomMark])
     }
-
-    result.innerHTML += `<br> Function 4: <br>`
-    pairThemeMark.map((i) => {
-        result.innerHTML += `${i} <br>`
-    });
 
     return pairThemeMark;
 }
 
-console.log(getThemesMark(pairThemes));
+console.log(getThemesMark(pair, themes));
