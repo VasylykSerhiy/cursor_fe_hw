@@ -1,5 +1,3 @@
-const ress = document.querySelector('.result');
-
 function getMaxDigit(number) {
   let result = 0;
   const numberStr =  String(number);
@@ -8,10 +6,10 @@ function getMaxDigit(number) {
       result = numberStr[i];
     }
   }
-
-  ress.innerHTML += (`The largest number in the list ${number}: ${result} <br>`)
   return result;
 }
+console.log(`Func 1: The largest number in the list 192837465: ${getMaxDigit('192837465')}`);
+
 
 function powNumber(number, step) {
   let result = number;
@@ -23,31 +21,27 @@ function powNumber(number, step) {
       result *= number;
     }
   }
-  
-
-  ress.innerHTML += (`The number "${number}" in degree "${step}": ${result} <br>`)
   return result;
 }
+console.log(`Func 2: The number "3" in degree "3": ${powNumber('3', '3')}`)
 
-function formatingLetter(name){
-  let result = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase() ;
-  ress.innerHTML += (`Formatting "${name}": ${result} <br>`)
-  return result;
-}
+
+function formatingLetter(name){result = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()}
+console.log(`Func 3: Formatting "iVaN": ${formatingLetter('iVaN')}`)
+
 
 function amountTax(number) {
   const percentageTax = 19.5;
-  let result = Math.round(Number(number) * (1 -  percentageTax / 100));
-
-  ress.innerHTML += (`The balance of the amount "${number}" after tax": ${result} <br>`)
-  return  result;
+  return Math.round(Number(number) * (1 -  percentageTax / 100));
 }
+console.log(`Func 4: The balance of the amount "1000" after tax": ${amountTax('1000')} <br>`)
+
 
 function getRandomNumber (min , max){
-  let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-  ress.innerHTML += (`Random number in the range from ${min > max ? max : min} to ${min < max ? max : min} are: ${randomNumber} <br>`)
-  return randomNumber;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+
 }
+console.log(`Func 5: Random number in the range from "1" to "10" are: ${getRandomNumber (1 , 10)}`)
 
 function countLetter (string, letter) {
   let result = 0;
@@ -59,9 +53,10 @@ function countLetter (string, letter) {
       result++
     }
   }
-  ress.innerHTML += (`In the text "${string}" there are letters "${letter}": ${result} <br>`);
   return result;
 }
+  console.log(`Func 6: In the text "Enter text" there are letters "e": ${countLetter('Enter text', 'e')}`);
+
 
 function convertCurrency (amount){
   let result = ""; 
@@ -70,28 +65,29 @@ function convertCurrency (amount){
   let amountLow = amount.toLowerCase();
 
   if(amountLow.indexOf("uah") != -1) {
-    result = `Conversion from ${hrn} UAH to the rate of 25 UAH: ${hrn / 25}$ <br>`
+    result = `Conversion from ${hrn} UAH to the rate of 25 UAH: ${hrn / 25}$`
   } else if(amountLow.indexOf("$") != -1 ){
-    result = `Conversion from ${usd} UAH to the rate of 25 UAH:  ${usd * 25}₴ <br>`
+    result = `Conversion from ${usd} UAH to the rate of 25 UAH:  ${usd * 25}₴`
   } else {
     result = "Ой-ой, щось пішло не так"
   };
-
-  ress.innerHTML += result
   return result;
 }
 
+console.log( `Func 7: ${convertCurrency('1000UAH')}`);
+console.log( `Func 7: ${convertCurrency('100$')}`);
+
 function getRandomPassword(number) {
-  console.log('number:', number)
   const lengthPass = number === 0 ? 8 : number;
   let password = ``;
   for (let i = 0; i < lengthPass; i++){
     password += (Math.floor(Math.random() * 10))
   }
-  
-  ress.innerHTML += `Password is ${lengthPass} characters long: ${password} <br>`
+
   return password;
 }
+console.log(`Func 8: Password is "7" characters long: ${getRandomPassword('7')}`)
+
 
 function deleteLetters (string, letter) {
   let result = '';
@@ -103,28 +99,27 @@ function deleteLetters (string, letter) {
       result += string[i];
     }
   }
-
-  ress.innerHTML += (`All letters "${letter}" have been deleted in the text "${string}": ${result} <br>`);
   return result;
 }
+console.log(`Func 9: All letters "e" have been deleted in the text "Enter text": ${deleteLetters("Enter text", 'e')}`);
 
 function isPalyndrom (text){
   const textLow = text.toLowerCase();
   const textRevers = textLow.split('').reverse().join('');
-  result = textLow === textRevers;
-
-  ress.innerHTML += `Is the word "${text}" a palindrome?: ${result ? 'Yes' : 'No'} <br>`
+  result = textLow === textRevers  ? 'Yes' : 'No';
   return  result
 }
+console.log(`Func 10: Is the word "madam" a palindrome?: ${isPalyndrom ('madam')}`)
 
 function deleteDuplicateLetter(text){
-  const arr = text.split('');
+  const arr = text.toLowerCase().split('');
   let debug = [];
   const result = arr.filter((item, i) => {
     debug.push({ item, i, indexOf: arr.indexOf(item)})
     return arr.indexOf(item) === arr.lastIndexOf(item)
   }).join('');
   
-  ress.innerHTML += `deletes all duplicate letters from the string: ${result} <br>`
   return result
 }
+
+console.log(`deletes all duplicate letters from the string: ${deleteDuplicateLetter('Бисквит был очень нежный')} <br>`)
