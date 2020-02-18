@@ -1,4 +1,3 @@
-const ress = document.querySelector('.result');
 const students = [{
   name: "Tanya",
   course: 3,
@@ -31,7 +30,6 @@ const students = [{
 // funk 1
 const getSubjects = (student) => {
   const result = []
-  const name = Object.values(student.name.split(' '));
   const predmeti = Object.keys(student.subjects)
   const letterUp = predmeti.map((item) => {
     return (item.charAt(0).toUpperCase() + item.slice(1));
@@ -45,20 +43,16 @@ const getSubjects = (student) => {
       result.push(letterUp[i])
     }
   }
-
-  ress.innerHTML += (`List of objects of ${name} => ${result} <br>`)
   return result
 }
 
 // func 2
 const getAverageMark = (student) => {
   const studentMarks = Object.values(student.subjects).flat();
-  const result = (studentMarks.reduce((sum, item) => {
+  return (studentMarks.reduce((sum, item) => {
     sum += item
     return sum
   },0)/studentMarks.length).toFixed(2);
-  ress.innerHTML += (`Average rating ${Object.values(student.name.split(' '))} => ${result} <br>`)
-  return result
 }
 
 // func 3
@@ -70,16 +64,10 @@ const getStudentInfo = (student) => {
     return sum
   },0)/studentMarks.length).toFixed(2);
 
-  
   result.course = Number(Object(student.course));
   result.name = String(Object.values(student.name.split(' ')));
   result.averageMark = Number(averageMark)
-  
-  let resultString = '';
-  for (key in result) {
-    resultString += `"${key}": ${result[key]} | `
-  }
-  ress.innerHTML += (`General information => ${resultString} <br>`)
+
   return result
 }
 
@@ -89,9 +77,7 @@ const getStudentsNames = (student) => {
   student.map(item => {
     studentsName.push(Object.values(item.name.split(' ')))
   })
-  const result = studentsName.flat().sort()
-  ress.innerHTML += (`Names ${studentsName} => ${result} <br>`)
-  return result
+  return studentsName.flat().sort()
 }
 
 // ToDo: func 5 
@@ -114,21 +100,13 @@ const getStudentsNames = (student) => {
       }
     }
 
-    ress.innerHTML += (`Best student => ${biggestName} <br>`)
     return biggestName
   }
 
 // TODO: func 6  
 const calculateWordLetters = (string) => {
-  const arrString = string.toLowerCase().split('')
-  const result = arrString.reduce((acc, el) => {
+  return string.toLowerCase().split('').reduce((acc, el) => {
     acc[el] = (acc[el] || 0) + 1;
     return acc;
   }, {})
-  let resultString = '';
-  for (key in result) {
-    resultString += `"${key}": ${result[key]} | `
-  }
-  ress.innerHTML += (`In a word ${string} => ${resultString} <br>`)
-  return result;
 }
