@@ -69,7 +69,7 @@ function convertCurrency (amount){
   } else if(amountLow.indexOf("$") != -1 ){
     result = `Conversion from ${usd} UAH to the rate of 25 UAH:  ${usd * 25}₴`
   } else {
-    result = "Ой-ой, щось пішло не так"
+    throw new Error('something went wrong!')
   };
   return result;
 }
@@ -106,7 +106,7 @@ console.log(`Func 9: All letters "e" have been deleted in the text "Enter text":
 function isPalyndrom (text){
   const textLow = text.toLowerCase();
   const textRevers = textLow.split('').reverse().join('');
-  result = textLow === textRevers  ? 'Yes' : 'No';
+  result = textLow === textRevers;
   return  result
 }
 console.log(`Func 10: Is the word "madam" a palindrome?: ${isPalyndrom ('madam')}`)
