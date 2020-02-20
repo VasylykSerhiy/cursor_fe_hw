@@ -106,7 +106,7 @@ console.log(`Func 9: All letters "e" have been deleted in the text "Enter text":
 function isPalyndrom (text){
   const textLow = text.toLowerCase();
   const textRevers = textLow.split('').reverse().join('');
-  result = textLow === textRevers;
+  const result = textLow === textRevers;
   return  result
 }
 console.log(`Func 10: Is the word "madam" a palindrome?: ${isPalyndrom ('madam')}`)
