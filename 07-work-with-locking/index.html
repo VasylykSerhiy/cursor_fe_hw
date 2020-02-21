@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p>Func 1: Considers how much taxes you pay as an IT specialist in 
+    <select id="taxSelect">
+      <option value="ukraine">Ukraine</option>
+      <option value="latvia">Latvia</option>
+      <option value="litva">Litva</option>
+    </select>
+
+    <button type="button" onclick="runGetMyTaxes()">Start funk</button>
+  </p>
+
+  <p>Func 2: Takes into account how much taxes IT professionals in 
+    <select id="midl-tax">
+      <option value="ukraine">Ukraine</option>
+      <option value="latvia">Latvia</option>
+      <option value="litva">Litva</option>
+    </select>
+    pay on average
+    <button type="button" onclick="runGetMiddleTaxes()">Start funk</button>
+  </p>
+
+  <p>Func 3: Сonsiders how much taxes IT specialists in 
+    <select id="total-tax">
+      <option value="ukraine">Ukraine</option>
+      <option value="latvia">Latvia</option>
+      <option value="litva">Litva</option>
+    </select>
+     pay
+    <button type="button" onclick="runGetTotalTaxes()">Start funk</button>
+  </p>
+  </p>
+
+  <p>Func 4: writes an object to the console every 10 seconds
+    <select id="my-salary">
+      <option value="ukraine">Ukraine</option>
+      <option value="latvia">Latvia</option>
+      <option value="litva">Litva</option>
+    </select>
+    <button type="button" onclick="runGetMySalary()">Start funk</button>
+    <button type="button" id="stop-interval">Stop funk</button>
+  </p>
+  <div class="result"></div>
+  <script src="./js/index.js"></script>
+  <script src="./js/runFunction.js"></script>
+</body>
+</html>
