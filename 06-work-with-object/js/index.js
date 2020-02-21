@@ -29,79 +29,50 @@ const students = [{
 
 // funk 1
 const getSubjects = (student) => {
-  const result = []
-  const predmeti = Object.keys(student.subjects)
-  const letterUp = predmeti.map((item) => {
-    return (item.charAt(0).toUpperCase() + item.slice(1));
+  return letterUp = Object.keys(student.subjects).map((item) => {
+    return (item.charAt(0).toUpperCase() + item.slice(1)).replace(/_/g, ' ');
   })
-
-  for (let i = 0; i < letterUp.length; i++) {
-    if (letterUp[i].indexOf('_') > 0) {
-      createSpace = letterUp[i].slice(0, letterUp[i].indexOf('_')) + " " + letterUp[i].slice(letterUp[i].indexOf('_') + 1)
-      result.push(createSpace)
-    } else {
-      result.push(letterUp[i])
-    }
-  }
-  return result
 }
 
 // func 2
 const getAverageMark = (student) => {
   const studentMarks = Object.values(student.subjects).flat();
-  return (studentMarks.reduce((sum, item) => {
+  return Number((studentMarks.reduce((sum, item) => {
     sum += item
     return sum
-  },0)/studentMarks.length).toFixed(2);
+  }, 0) / studentMarks.length).toFixed(2));
 }
 
 // func 3
 const getStudentInfo = (student) => {
   const result = {}
-  const studentMarks = Object.values(student.subjects).flat();
-  const averageMark = (studentMarks.reduce((sum, item) => {
-    sum += item
-    return sum
-  },0)/studentMarks.length).toFixed(2);
-
-  result.course = Number(Object(student.course));
-  result.name = String(Object.values(student.name.split(' ')));
+  const averageMark = getAverageMark(student)
+  result.course = student.course;
+  result.name = student.name;
   result.averageMark = Number(averageMark)
-
   return result
 }
 
+console.log(getStudentInfo(students[0]));
 // ToDo:  func 4 
 const getStudentsNames = (student) => {
-  const studentsName = []
-  student.map(item => {
-    studentsName.push(Object.values(item.name.split(' ')))
-  })
-  return studentsName.flat().sort()
+  return studentsName = student.map(item => {
+    return Object.values(item.name.split(' '))
+  }).flat().sort()
 }
-
 // ToDo: func 5 
-  const getBestStudent = (students) => {
-    const result = {}
-    Object.values(students).map((item) => {
-      const getmark = getAverageMark(item);
-      result[item.name] = getmark
-    },{})
-
-    let maxMark = 0;
-    let biggestName = ''
-    for(key in result){
-      if(result[key] > maxMark){
-        maxMark = result[key]
-        biggestName = key
-      } else if(maxMark[key] === maxMark){
-        maxMark = result[key]
-        biggestName += ` ${key}`
-      }
+const getBestStudent = (students) => {
+  let maxMark = 0;
+  let bestStudentName = '';
+  Object.values(students).forEach((item) => {
+    const getmark = getAverageMark(item);
+    if (getmark > maxMark) {
+      maxMark = getmark;
+      bestStudentName = item.name;
     }
-
-    return biggestName
-  }
+  });
+  return bestStudentName;
+}
 
 // TODO: func 6  
 const calculateWordLetters = (string) => {
