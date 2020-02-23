@@ -29,7 +29,7 @@ const students = [{
 
 // funk 1
 const getSubjects = (student) => {
-  return letterUp = Object.keys(student.subjects).map((item) => {
+  return Object.keys(student.subjects).map((item) => {
     return (item.charAt(0).toUpperCase() + item.slice(1)).replace(/_/g, ' ');
   })
 }
@@ -56,7 +56,7 @@ const getStudentInfo = (student) => {
 console.log(getStudentInfo(students[0]));
 // ToDo:  func 4 
 const getStudentsNames = (student) => {
-  return studentsName = student.map(item => {
+  return student.map(item => {
     return Object.values(item.name.split(' '))
   }).flat().sort()
 }
