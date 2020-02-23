@@ -30,7 +30,7 @@ function getMySalary (strCountry) {
     result.profit = profit
     console.log(strCountry,': ', result);
     return result
-   }, 1000);
+   }, 10000);
 
    document.getElementById('stop-interval').addEventListener("click",function() {
     clearInterval(interval);
