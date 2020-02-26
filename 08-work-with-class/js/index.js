@@ -47,12 +47,7 @@ console.log(`/////////////////////////Advanced//////////////////////////////`);
 
 class BudgetStudent extends Student{
   constructor(university, course, fullName){
-    super(university, course, fullName)
-    this.university = university;
-    this.course = course;
-    this.fullName = fullName;
-    this.marksStudent = [5, 4, 4, 5];
-    this.fired = false;
+    super(university, course, fullName);
     this.initInterval();
   }
 
@@ -65,7 +60,7 @@ class BudgetStudent extends Student{
   initInterval() {
     setInterval(() => {
       this.getScholarship();
-    }, 1000)
+    }, 30000)
   }
 }
 
