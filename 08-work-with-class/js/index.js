@@ -39,8 +39,8 @@ class Student {
 let student = new Student ('Высшей Школы Мошенничества г.Одесса', 1, 'Остап Родоманський Бендер')
 console.log(student.getInfo());
 console.log(`Массив оценок студента => ${student.marks}`);
-console.log(`Студент получив ще одну оцінку ${student.marks = 5} => ${student.marks}`);
-console.log(`Середня оцінка студента => ${student.getAverageMark()}`);
+console.log(`Студент получил еще одну оценку ${student.marks = 5} => ${student.marks}`);
+console.log(`Средняя оценка студента => ${student.getAverageMark()}`);
 
 console.log(``);
 console.log(`/////////////////////////Advanced//////////////////////////////`);
