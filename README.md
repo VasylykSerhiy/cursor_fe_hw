@@ -7,3 +7,4 @@
 * [06-work-with-object](https://vasylykserhii.github.io/cursor_fe_hw/06-work-with-object/)
 * [07-work-with-locking](https://vasylykserhii.github.io/cursor_fe_hw/07-work-with-locking/)
 * [08-work-with-class](https://vasylykserhii.github.io/cursor_fe_hw/08-work-with-class/)
+* [09-work-with-DOM](https://vasylykserhii.github.io/cursor_fe_hw/09-work-with-DOM/)
