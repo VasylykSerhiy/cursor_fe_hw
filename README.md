@@ -1,5 +1,6 @@
 # cursor_fe_hw
 *[01-work-with-variables](https://vasylykserhii.github.io/cursor_fe_hw/01-work-with-variables/)
+
 *[02-work-with-сyclesAndBranches](https://vasylykserhii.github.io/cursor_fe_hw/02-work-with-сyclesAndBranches/)
 *[03-work-with-function](https://vasylykserhii.github.io/cursor_fe_hw/03-work-with-function/)
 *[04-work-with-array](https://vasylykserhii.github.io/cursor_fe_hw/04-work-with-array/)
