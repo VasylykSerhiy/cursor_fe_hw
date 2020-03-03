@@ -8,4 +8,4 @@
 * [07-work-with-locking](https://vasylykserhii.github.io/cursor_fe_hw/07-work-with-locking/)
 * [08-work-with-class](https://vasylykserhii.github.io/cursor_fe_hw/08-work-with-class/)
 * [09-work-with-DOM](https://vasylykserhii.github.io/cursor_fe_hw/09-work-with-DOM/)
-* [10-work-with-event](https://vasylykserhii.github.io/cursor_fe_hw/10-work-with-event/)
+* [10-work-with-event](https://vasylykserhii.github.io/cursor_fe_hw/10-work-with-event/index.html)
