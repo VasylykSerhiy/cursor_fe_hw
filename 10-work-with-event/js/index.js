@@ -6,8 +6,6 @@ const noteFa = document.querySelector('.sound-fa');
 const noteSol = document.querySelector('.sound-sol');
 const noteLja = document.querySelector('.sound-lja');
 const noteSi = document.querySelector('.sound-si');
-// const dataKeyCodeRu = document.getAttribute
-// console.log(dataKeyCodeRu)
 
 note.forEach(item => {
   item.addEventListener( "click" , function() {
