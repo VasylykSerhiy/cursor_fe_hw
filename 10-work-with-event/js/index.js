@@ -18,9 +18,7 @@ note.forEach(item => {
 })
 
 document.addEventListener('keypress', (e) => {
-  console.log(e.keyCode)
   note.forEach((item) => {
-    
     if(Number(item.dataset.keycodeRu) === e.keyCode ||
      Number(item.dataset.keycodeEng) === e.keyCode){
       const audio = item.querySelector('audio')
