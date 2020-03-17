@@ -8,29 +8,29 @@ let wookiee = false;
 
 const renderPlanets = async (pages) => {
   await axios.get(`${_apiBase}/planets/?page=${pages}`)
-    .then(function(res){
+    .then(function (res) {
       const items = res.data.results;
-      if (res.data.next === null){
+      if (res.data.next === null) {
         nextPages = false;
         btnNext.classList.add('none')
       }
 
-      if (res.data.previous === null){
+      if (res.data.previous === null) {
         prevPages = false
         btnPrev.classList.add('none')
       }
 
-      if(wookiee){
+      if (wookiee) {
         let url = []
-        res.data.results.map(item => url.push(item.url) )
-  
+        res.data.results.map(item => url.push(item.url))
+
         let requests = url.map(url => axios.get(`${url}?format=wookiee`))
         Promise.all(requests)
-        .then(res => {
-          res.forEach(item => {
-            loader.classList.add('none')
-            ress.classList.add('planet')
-            ress.innerHTML += (`
+          .then(res => {
+            res.forEach(item => {
+              loader.classList.add('none')
+              ress.classList.add('planet')
+              ress.innerHTML += (`
                 <div class="planet__wrap">
                   <h4 class="planet__name">${item.data.whrascwo}</h4>
                   <ul class="planet__detail">
@@ -49,10 +49,10 @@ const renderPlanets = async (pages) => {
                   </ul>
                 </div>
             `)
+            })
           })
-        })
       } else {
-        items.map((item, i) => {
+        items.map((item) => {
           loader.classList.add('none')
           ress.classList.add('planet')
           ress.innerHTML += (`
@@ -82,24 +82,23 @@ const renderPlanets = async (pages) => {
 const renderCharacters = async (film) => {
   try {
     await axios.get(`${_apiBase}/films/${film}`)
-    .then(function(res){
-      let characters = res.data.characters
-      let requests = undefined
-      if(wookiee){
-         requests = characters.map(url => axios.get(`${url}?format=wookiee`))
-      } else {
-         requests = characters.map(url => axios.get(url))
-      }
-      console.log(requests)
-      Promise.all(requests)
-        .then(responses => {
-          responses.forEach(item => {
-            ress.classList.add('person')
-            loader.classList.add('none')
-            const idRegExp = /\/([0-9]*)\/$/;
-           if(wookiee){
-            const id =  item.data.hurcan.match(idRegExp)[1]
-            ress.innerHTML += (`
+      .then(function (res) {
+        let characters = res.data.characters
+        let requests = undefined
+        if (wookiee) {
+          requests = characters.map(url => axios.get(`${url}?format=wookiee`))
+        } else {
+          requests = characters.map(url => axios.get(url))
+        }
+        Promise.all(requests)
+          .then(responses => {
+            responses.forEach(item => {
+              ress.classList.add('person')
+              loader.classList.add('none')
+              const idRegExp = /\/([0-9]*)\/$/;
+              if (wookiee) {
+                const id = item.data.hurcan.match(idRegExp)[1]
+                ress.innerHTML += (`
               <div class="person__wrap">
                 <img class="person__image"
                   src='https://starwars-visualguide.com/assets/img/characters/${id}.jpg' />
@@ -118,9 +117,9 @@ const renderCharacters = async (film) => {
                 </div>
               </div>
               `)
-           } else {
-            const id =  item.data.url.match(idRegExp)[1]
-            ress.innerHTML += (`
+              } else {
+                const id = item.data.url.match(idRegExp)[1]
+                ress.innerHTML += (`
               <div class="person__wrap">
                 <img class="person__image"
                   src='https://starwars-visualguide.com/assets/img/characters/${id}.jpg' />
@@ -139,12 +138,12 @@ const renderCharacters = async (film) => {
                 </div>
               </div>
               `)
-           }
+              }
+            })
           })
-        })
-      
-    })
-  } catch(err) {
+
+      })
+  } catch (err) {
     if (err.response.status === 404) {
       loader.classList.add('none')
       ress.innerHTML = (`
@@ -155,7 +154,7 @@ const renderCharacters = async (film) => {
       `)
     }
   }
-  
+
 }
 
 

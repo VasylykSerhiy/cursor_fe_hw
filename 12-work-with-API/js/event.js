@@ -11,7 +11,7 @@ const homeBtn = document.querySelector('.home')
 const btnWrapper = document.querySelector('.btn-wrap')
 const launge = document.querySelector('.launge')
 
-btnGetInfo.addEventListener('click', function(){
+btnGetInfo.addEventListener('click', function () {
   ress.innerHTML = '';
   renderPlanets(pages)
   this.classList.add('none')
@@ -21,39 +21,39 @@ btnGetInfo.addEventListener('click', function(){
   btnGetPerson.classList.add('none')
 })
 
-btnNext.addEventListener('click', function(){
-  if(nextPages){
+btnNext.addEventListener('click', function () {
+  if (nextPages) {
     pages++;
     ress.innerHTML = '';
     loader.classList.remove('none')
     renderPlanets(pages)
-  } 
+  }
 
-  if(!prevPages){
+  if (!prevPages) {
     btnPrev.classList.remove('none')
   }
 })
 
-btnPrev.addEventListener('click', function(){
-  if(pages > 1) {
+btnPrev.addEventListener('click', function () {
+  if (pages > 1) {
     pages--
     ress.innerHTML = '';
     loader.classList.remove('none')
     renderPlanets(pages)
-  } 
-  if(!nextPages){
+  }
+  if (!nextPages) {
     btnNext.classList.remove('none')
   }
 })
 
-btnGetPerson.addEventListener('click', function(){
+btnGetPerson.addEventListener('click', function () {
   ress.innerHTML = '';
   this.classList.add('none')
   btnWrapper.classList.add('none')
   formWrapper.classList.remove('none')
 })
 
-searchForm.addEventListener('submit', function(event){
+searchForm.addEventListener('submit', function (event) {
   event.preventDefault()
   let film = searchForm.querySelector('input').value;
   ress.innerHTML = '';
@@ -64,7 +64,7 @@ searchForm.addEventListener('submit', function(event){
 
 })
 
-homeBtn.addEventListener('click', function(){
+homeBtn.addEventListener('click', function () {
   ress.innerHTML = '';
   loader.classList.add('none')
   btnPrev.classList.add('none')
@@ -77,12 +77,12 @@ homeBtn.addEventListener('click', function(){
 
 })
 
-launge.addEventListener('click', function(){
+launge.addEventListener('click', function () {
   wookiee = !wookiee
-  if(wookiee){
-    launge.textContent  = 'Wk'
+  if (wookiee) {
+    launge.textContent = 'Wk'
   } else {
-    launge.textContent  = 'Eng'
+    launge.textContent = 'Eng'
   }
 })
 
