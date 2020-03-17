@@ -9,4 +9,5 @@
 * [08-work-with-class](https://vasylykserhii.github.io/cursor_fe_hw/08-work-with-class/)
 * [09-work-with-DOM](https://vasylykserhii.github.io/cursor_fe_hw/09-work-with-DOM/)
 * [10-work-with-event](https://vasylykserhii.github.io/cursor_fe_hw/10-work-with-event/)
-* [11-work-with-promises](https://vasylykserhii.github.io/cursor_fe_hw/10-work-with-promises/)
+* [11-work-with-promises](https://vasylykserhii.github.io/cursor_fe_hw/11-work-with-promises/)
+* [12-work-with-API](https://vasylykserhii.github.io/cursor_fe_hw/12-work-with-API/)
