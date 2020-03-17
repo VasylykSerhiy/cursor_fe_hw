@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="./css/spinner.css">
+  <link rel="stylesheet" href="./css/style.css">
+<body>
+  <div class="home"><i class="fas fa-home"></i></div>
+  <div class="launge">Eng</div>
+  <div class="container">
+    <div class="result__wrap">
+      <div class="lds-css none">
+        <div class="lds-double-ring">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="form__wrap none">
+        <form class="search__form__film ">
+          <div>
+            <input type="text" placeholder="Введите номер фильма">
+          <button>Search</button>
+          </div>
+        </form>
+      </div>
+      <div class="result">
+        
+    
+      </div>
+    </div>
+    <div class="btn-wrap">
+      <button id="get-person">Получить список персонажей</button>
+      <button id="get-planets">Получить список планет</button>
+      <button id="get-prev" class="none">Prev</button>
+      <button id="get-next" class="none">Next</button>
+    </div>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/event.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>
