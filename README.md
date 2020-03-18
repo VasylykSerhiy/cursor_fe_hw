@@ -11,3 +11,4 @@
 * [10-work-with-event](https://vasylykserhii.github.io/cursor_fe_hw/10-work-with-event/)
 * [11-work-with-promises](https://vasylykserhii.github.io/cursor_fe_hw/11-work-with-promises/)
 * [12-work-with-API](https://vasylykserhii.github.io/cursor_fe_hw/12-work-with-API/)
+* [13-work-with-generator](https://vasylykserhii.github.io/cursor_fe_hw/13-work-with-generator/)
