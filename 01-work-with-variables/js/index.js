@@ -36,8 +36,8 @@ console.log(`Cреднее значение цен: ${midl}`);
 document.writeln(`Cреднее значение цен: ${midl} </br>`);
 
 const discount = (Math.random() * 100).toFixed(0),
-      discountAnanas = (ananas * (1 - discount / 100)).toFixed(2);
-      discountOrange = (orange * (1 - discount / 100)).toFixed(2);
+      discountAnanas = (ananas * (1 - discount / 100)).toFixed(2),
+      discountOrange = (orange * (1 - discount / 100)).toFixed(2),
       discountMango = (mango * (1 - discount / 100)).toFixed(2);
 
 console.log(`Cумма к оплате за ananas со скидкой ${discount}%: ${discountAnanas}`);
