@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/cursor_fe_hw/15-work-with-react/static/css/main.5b22630c.chunk.css",
-    "main.js": "/cursor_fe_hw/15-work-with-react/static/js/main.38266ea6.chunk.js",
-    "main.js.map": "/cursor_fe_hw/15-work-with-react/static/js/main.38266ea6.chunk.js.map",
-    "runtime-main.js": "/cursor_fe_hw/15-work-with-react/static/js/runtime-main.b35b01f3.js",
-    "runtime-main.js.map": "/cursor_fe_hw/15-work-with-react/static/js/runtime-main.b35b01f3.js.map",
-    "static/js/2.2e4ab891.chunk.js": "/cursor_fe_hw/15-work-with-react/static/js/2.2e4ab891.chunk.js",
-    "static/js/2.2e4ab891.chunk.js.map": "/cursor_fe_hw/15-work-with-react/static/js/2.2e4ab891.chunk.js.map",
-    "index.html": "/cursor_fe_hw/15-work-with-react/index.html",
-    "precache-manifest.8dcace33b0be26eba18b4c2a2138a55d.js": "/cursor_fe_hw/15-work-with-react/precache-manifest.8dcace33b0be26eba18b4c2a2138a55d.js",
-    "service-worker.js": "/cursor_fe_hw/15-work-with-react/service-worker.js",
-    "static/css/main.5b22630c.chunk.css.map": "/cursor_fe_hw/15-work-with-react/static/css/main.5b22630c.chunk.css.map",
-    "static/js/2.2e4ab891.chunk.js.LICENSE.txt": "/cursor_fe_hw/15-work-with-react/static/js/2.2e4ab891.chunk.js.LICENSE.txt"
+    "main.css": "/cursor_fe_hw/static/css/main.23a83e29.chunk.css",
+    "main.js": "/cursor_fe_hw/static/js/main.44c0700c.chunk.js",
+    "main.js.map": "/cursor_fe_hw/static/js/main.44c0700c.chunk.js.map",
+    "runtime-main.js": "/cursor_fe_hw/static/js/runtime-main.abc2280f.js",
+    "runtime-main.js.map": "/cursor_fe_hw/static/js/runtime-main.abc2280f.js.map",
+    "static/js/2.e27ebb78.chunk.js": "/cursor_fe_hw/static/js/2.e27ebb78.chunk.js",
+    "static/js/2.e27ebb78.chunk.js.map": "/cursor_fe_hw/static/js/2.e27ebb78.chunk.js.map",
+    "index.html": "/cursor_fe_hw/index.html",
+    "precache-manifest.a02011511d246aeb287cb0de22a9d76c.js": "/cursor_fe_hw/precache-manifest.a02011511d246aeb287cb0de22a9d76c.js",
+    "service-worker.js": "/cursor_fe_hw/service-worker.js",
+    "static/css/main.23a83e29.chunk.css.map": "/cursor_fe_hw/static/css/main.23a83e29.chunk.css.map",
+    "static/js/2.e27ebb78.chunk.js.LICENSE.txt": "/cursor_fe_hw/static/js/2.e27ebb78.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b35b01f3.js",
-    "static/js/2.2e4ab891.chunk.js",
-    "static/css/main.5b22630c.chunk.css",
-    "static/js/main.38266ea6.chunk.js"
+    "static/js/runtime-main.abc2280f.js",
+    "static/js/2.e27ebb78.chunk.js",
+    "static/css/main.23a83e29.chunk.css",
+    "static/js/main.44c0700c.chunk.js"
   ]
 }
