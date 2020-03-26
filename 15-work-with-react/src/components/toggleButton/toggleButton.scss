@@ -1,0 +1,23 @@
+.toggle-btn{
+  display: flex;
+  align-items: center;
+
+  button{
+    border: 1px solid #888;
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: #888;
+    cursor: pointer;
+    margin-right: 30px;
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+  p{
+    color: #888;
+    font-size: 20px;
+  }
+}

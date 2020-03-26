@@ -6,7 +6,7 @@ import { faRetweet, faUpload,
  } from '@fortawesome/free-solid-svg-icons'
 import './post.scss'
 
-export default class post extends Component {
+export default class Post extends Component {
   render() {
     const {author, content, image, date} = this.props
 
