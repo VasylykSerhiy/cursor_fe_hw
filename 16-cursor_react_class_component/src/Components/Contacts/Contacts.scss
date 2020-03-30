@@ -1,0 +1,63 @@
+.contacts{
+  width: 320px;
+  height: 380px;
+
+  &__search{
+    background-color: #0070e0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    input{
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      width: 100%;
+      margin-right: 10px;
+
+      &:focus{
+        outline: none;
+      }
+
+      &::placeholder{
+        color: #fff;
+      }
+    }
+  }
+
+  &__checkbox{
+    display: flex;
+    align-items: center;
+
+    &__wrap{
+      display: flex;
+      justify-content: space-around;
+      background-color: #034765;
+      padding: 10px;
+    }
+
+    input{
+      display: none;
+    }
+
+    label{
+      padding: 5px 15px;
+      -webkit-user-select: none;
+      /* user-select -- это нестандартное свойство */
+  
+      -moz-user-select: none;
+      /* поэтому нужны префиксы */
+  
+      -ms-user-select: none;
+    }
+
+    input:checked  + label{
+      background-color: rgba(#0070e0, .2);
+    }
+
+    
+  }
+}

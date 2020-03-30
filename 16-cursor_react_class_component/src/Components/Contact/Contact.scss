@@ -1,0 +1,56 @@
+.contact{
+  display: flex;
+  margin-top: 7px;
+  padding: 5px;
+
+  &:hover{
+    background-color: rgba(#888, .2);
+  }
+
+  &__clear{
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  &__gender{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    line-height: 1;
+
+    &.male{
+      background-color: #63b4e3;
+    }
+
+    &.female{
+      background-color: #e36398
+    }
+
+    &.n-a{
+      background-color: #cc7b7b;
+    }
+  }
+
+  &__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+  }
+
+  &__name{
+    font-size: 17px;
+  }
+
+  &__phone{
+
+    a{
+      color: #888;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  }
+}
