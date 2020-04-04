@@ -7,11 +7,19 @@ import './Contact.scss'
 const Contact = ({contacts}) => {
 
   const items = contacts.map((item, index) => {
-    const icon = !item.gender ? 'n/a' :
-      item.gender === 'female' ? <FontAwesomeIcon icon={faVenus}/> : <FontAwesomeIcon icon={faMars}/>
-   
-    const iconBgClass = !item.gender ? 'n-a' :
-      item.gender === 'female' ? 'female' : 'male'
+    let icon ;
+    let iconBgClass;
+
+    if( item.gender === 'female' ) {
+      icon = <FontAwesomeIcon icon={faVenus}/>
+      iconBgClass = 'female'
+    } else if( item.gender === 'male') {
+      icon = <FontAwesomeIcon icon={faMars}/>
+      iconBgClass = 'male'
+    } else {
+      icon = 'n/a'
+      iconBgClass = 'n-a'
+    }
     
     return (
       <div className='contact' key={item + index}>

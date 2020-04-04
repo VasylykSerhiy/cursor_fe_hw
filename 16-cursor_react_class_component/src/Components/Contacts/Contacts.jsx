@@ -50,32 +50,32 @@ export default class Contracts extends Component {
   }
 
   search = (items, filter) => {
-    const regex = new RegExp(filter, 'g');
     return items.filter(({firstName, lastName, phone}) => {
-      return firstName.match(regex) ||
-             lastName.match(regex)  ||
-             phone.match(regex)     
+      return firstName.toLowerCase().indexOf(filter.toLowerCase()) !== -1 ||
+             lastName.toLowerCase().indexOf(filter.toLowerCase()) !== -1 ||
+             phone.indexOf(filter) !== -1 
     });
   }
 
-  checked = (items) => {
+  
 
+  checked = (items) => {
     let tempArr = items;
-    if(!this.state.male){
-      tempArr = [
-        tempArr.flat().filter((item) => item.gender !== "male"),
-      ];
+
+    const checkedGender = (arr, gander) => {
+      return tempArr = [arr.flat().filter((item) => gander ? item.gender !== gander : item.gender)]
     }
+
+    if(!this.state.male){
+      checkedGender(tempArr, 'male')
+    }
+
     if(!this.state.female){
-      tempArr = [
-        tempArr.flat().filter((item) => item.gender !== "female"),
-      ];
+      checkedGender(tempArr, 'female')
     }
 
     if(!this.state.noGender){
-      tempArr = [
-        tempArr.flat().filter((item) => item.gender),
-      ];
+      checkedGender(tempArr)
     }
 
     return tempArr.flat()
