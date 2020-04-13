@@ -15,3 +15,5 @@
 * [14-work-with-webpack](https://vasylykserhii.github.io/cursor_fe_hw/14-work-with-webpack/)
 * [15-cursor_react_foundations](https://vasylykserhii.github.io/cursor_react_foundations/)
 * [16-cursor_react_class_component](https://vasylykserhii.github.io/cursor_react_class_component/)
+* [17-cursor_react_hooks](https://vasylykserhii.github.io/cursor-react-hooks/)
+* [18-cursor_react_routes](https://vasylykserhii.github.io/cursor-react-routes/)
