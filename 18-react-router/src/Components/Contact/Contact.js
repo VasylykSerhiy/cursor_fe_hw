@@ -21,7 +21,7 @@ const Contact = ({ contacts }) => {
       icon = 'n/a'
       iconBgClass = 'n-a'
     }
-    const backUrl = `/contacts/${item.firstName}_${item.lastName}`
+    const backUrl = `/cursor-react-routes/contacts/${item.firstName}_${item.lastName}`
     return (
       <div className='contact' key={item + index}>
         <div className={`contact__gender ${iconBgClass}`}>{icon}</div>
