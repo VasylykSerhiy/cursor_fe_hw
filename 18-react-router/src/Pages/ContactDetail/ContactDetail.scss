@@ -1,0 +1,27 @@
+.contact-detail{
+  color: #999;
+  height: calc(100vh - 66px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__wrap{
+    border: 1px solid #999;
+    padding: 25px;
+    border-radius: 5px;
+  }
+
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    min-width: 200px;
+
+    &:not(:last-of-type){
+      margin-bottom: 5px;
+    }
+  }
+
+  &__name{
+    font-weight: bold;
+  }
+}

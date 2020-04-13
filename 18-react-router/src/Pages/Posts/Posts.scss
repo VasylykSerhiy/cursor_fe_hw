@@ -1,0 +1,8 @@
+.posts{
+  &__wrapp{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    padding: 25px;
+  }
+}
