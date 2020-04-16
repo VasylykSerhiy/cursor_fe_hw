@@ -17,3 +17,4 @@
 * [16-cursor_react_class_component](https://vasylykserhii.github.io/cursor_react_class_component/)
 * [17-cursor_react_hooks](https://vasylykserhii.github.io/cursor-react-hooks/)
 * [18-cursor_react_routes](https://vasylykserhii.github.io/cursor-react-routes/)
+* [18-cursor_react_jss](https://vasylykserhii.github.io/cursor-react-jss/)
