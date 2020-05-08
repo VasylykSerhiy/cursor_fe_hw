@@ -1,5 +1,5 @@
 const ress = document.querySelector('.result')
-const _apiBase = 'https://swapi.co/api';
+const _apiBase = 'https://swapi.dev/api';
 let pages = 1;
 let nextPages = true;
 let prevPages = true;
@@ -149,7 +149,7 @@ const renderCharacters = async (film) => {
       ress.innerHTML = (`
       <div class='err'>
         <div class='err__404'>404</div>
-        <div class='err__text'>Такого фильме нет :(</div>
+        <div class='err__text'>Movie not found :(</div>
       </div>
       `)
     }
