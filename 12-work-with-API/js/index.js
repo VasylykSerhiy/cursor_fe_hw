@@ -81,7 +81,7 @@ const renderPlanets = async (pages) => {
 
 const renderCharacters = async (film) => {
   try {
-    await axios.get(`${_apiBase}/films/${film}`)
+    await axios.get(`${_apiBase}/films/${film}/`)
       .then(function (res) {
         let characters = res.data.characters
         let requests = undefined
