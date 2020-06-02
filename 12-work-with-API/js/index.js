@@ -1,5 +1,5 @@
 const ress = document.querySelector('.result')
-const _apiBase = 'https://swapi.dev/api';
+const _apiBase = 'http://swapi.dev/api';
 let pages = 1;
 let nextPages = true;
 let prevPages = true;
@@ -101,7 +101,7 @@ const renderCharacters = async (film) => {
                 ress.innerHTML += (`
               <div class="person__wrap">
                 <img class="person__image"
-                  src='https://starwars-visualguide.com/assets/img/characters/${id}.jpg' />
+                  src='http://starwars-visualguide.com/assets/img/characters/${id}.jpg' />
                 <div class="person__detail">
                   <h4 class="person__name">${item.data.whrascwo}</h4>
                   <ul class="person__detail__list">
@@ -122,7 +122,7 @@ const renderCharacters = async (film) => {
                 ress.innerHTML += (`
               <div class="person__wrap">
                 <img class="person__image"
-                  src='https://starwars-visualguide.com/assets/img/characters/${id}.jpg' />
+                  src='http://starwars-visualguide.com/assets/img/characters/${id}.jpg' />
                 <div class="person__detail">
                   <h4 class="person__name">${item.data.name}</h4>
                   <ul class="person__detail__list">
