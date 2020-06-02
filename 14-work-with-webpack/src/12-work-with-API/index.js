@@ -1,6 +1,6 @@
 
 const ress = document.querySelector('.result')
-const _apiBase = 'https://swapi.co/api';
+const _apiBase = 'http://swapi.co/api';
 export let pages = 1;
 let nextPages = true;
 let prevPages = true;
